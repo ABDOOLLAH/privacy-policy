@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Color Mappings -->
+    <color name="theme_background">@android:color/white</color>
+    <color name="theme_surface">@android:color/white</color>
+    <color name="theme_text_primary">@android:color/black</color>
+    <color name="theme_text_secondary">#616161</color>
+    <color name="theme_input_background">#F5F5F5</color>
+    <color name="theme_border">#E0E0E0</color>
+    <color name="theme_divider">#E0E0E0</color>
+</resources>

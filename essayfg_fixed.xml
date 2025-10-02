@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_screen">
+
+        <!-- Header Section -->
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_description"
+            android:textSize="@dimen/body_text_size"
+            android:textColor="@color/theme_text_secondary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Main Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="10dp">
+
+            <!-- Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_essay_question"
+                android:textSize="@dimen/body_text_size"
+                android:textColor="@color/theme_text_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:hint="@string/hint_example"
+                app:boxBackgroundColor="@color/theme_input_background"
+                app:boxBackgroundMode="filled"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="@color/theme_text_secondary"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/theme_text_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/question_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLines="8"
+                    android:minHeight="120dp"
+                    android:padding="16dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/theme_text_primary"
+                    android:textColorHint="@color/theme_text_secondary"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Mic Button inside input -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-60dp"
+                android:background="@drawable/input_background"
+                android:layout_marginBottom="48dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ivMic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_mic_24"
+                    android:background="@drawable/ic_mic_24"
+                    android:padding="1dp"
+                    android:gravity="center"
+                    app:iconGravity="start"
+                    android:layout_margin="3dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- زر مايك رسمي مستقل -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_speech"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="-60dp"
+                    android:layout_marginEnd="68dp"
+                    android:layout_marginBottom="48dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:icon="@drawable/ic_mic_24"  />
+            </FrameLayout>
+
+            <!-- OR Divider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/theme_border" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OR"
+                    android:textColor="@color/theme_text_secondary"
+                    android:textSize="@dimen/small_text_size"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/theme_border" />
+            </LinearLayout>
+
+            <!-- Upload Button -->
+            <LinearLayout
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/upload_border"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_attach"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_image"
+                    android:textSize="@dimen/body_text_size"
+                    android:textColor="@color/theme_text_secondary" />
+            </LinearLayout>
+
+            <!-- Solve Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSolve"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/solve_question"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="@color/theme_background"
+                android:background="@drawable/btn_solve"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_magic_wand"
+                android:drawablePadding="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Footer Info -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_animation"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/solving_animation" />
+        </LinearLayout>
+
+        <!-- Results Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:minHeight="200dp">
+
+            <TextView
+                android:id="@+id/tvResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/results_placeholder"
+                android:textSize="@dimen/body_text_size"
+                android:textColor="@color/theme_text_secondary"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/solution_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/theme_surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loading_animation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- ... محتوى الحل كما هو ... -->
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- أدوات المتابعة أسفل solution_container -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/follow_up_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/follow_up_hint"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/theme_input_background"
+            app:hintTextColor="@color/theme_text_secondary"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/follow_up_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:minHeight="64dp"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:textColor="@color/theme_text_primary"
+                android:textColorHint="@color/theme_text_secondary"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/follow_up_send"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="8dp"
+            android:text="@string/follow_up_send"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_solve"
+            android:visibility="gone" />
+
+        <!-- History Section ... -->
+    </LinearLayout>
+</ScrollView>
