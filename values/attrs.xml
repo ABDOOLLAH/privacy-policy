@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background attributes -->
+    <attr name="white" format="color|reference" />
+    <attr name="background_primary" format="color|reference" />
+    <attr name="background_dark" format="color|reference" />
+    <attr name="surface_white" format="color|reference" />
+    <attr name="input_background" format="color|reference" />
+    <attr name="background_input" format="color|reference" />
+    <attr name="background_card" format="color|reference" />
+    <attr name="primary_background" format="color|reference" />
+    
+    <!-- Text attributes -->
+    <attr name="text_primary" format="color|reference" />
+    <attr name="text_secondary" format="color|reference" />
+    <attr name="text_white" format="color|reference" />
+    <attr name="text_gray" format="color|reference" />
+    <attr name="text_gray_light" format="color|reference" />
+    <attr name="text_muted" format="color|reference" />
+    
+    <!-- Border and divider attributes -->
+    <attr name="border_color" format="color|reference" />
+    <attr name="border_focus" format="color|reference" />
+    <attr name="divider_color" format="color|reference" />
+    
+    <!-- Button attributes -->
+    <attr name="button_primary" format="color|reference" />
+    <attr name="button_secondary" format="color|reference" />
+    <attr name="primary_green" format="color|reference" />
+    
+    <!-- Tab attributes -->
+    <attr name="tab_selected" format="color|reference" />
+    <attr name="tab_unselected" format="color|reference" />
+    
+    <!-- Accent attributes -->
+    <attr name="cyan_accent" format="color|reference" />
+</resources>
